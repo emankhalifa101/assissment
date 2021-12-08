@@ -1,0 +1,21 @@
+.login-container {
+  background: #ffff;
+  text-align: center;
+  padding: 10%;
+}
+.loginBox{
+  background-color: #f3f3f3;
+  padding: 20pt;
+  border-radius: 5pt;
+  text-align: center;
+}
+.form-title {
+  background-color: #2b5696;
+  color: #ffff;
+  text-align: center;
+  width: 100%;
+}
+.full-width-input {
+  width: 100%;
+  margin-top: 10pt;
+}

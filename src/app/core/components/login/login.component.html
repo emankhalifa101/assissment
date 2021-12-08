@@ -1,0 +1,47 @@
+<div layout="row" layout-wrap layout-align="center center"  class="login-container">
+  <div layout="row" layout-align="center center" class="loginBox" flex flex-order="-1">
+    <div flex="grow">
+      <mat-toolbar flex="grow" class="form-title">
+        <mat-toolbar-row>
+          <span>Login</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+    <div class="content" flex="grow">
+      <div flex="grow" *ngIf= "loginForm.valid && invaildData">
+        <p>email or password is invalid , please try again </p>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div flex="grow">
+          <mat-form-field class="full-width-input">
+            <input matInput type="text" placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="isFieldInvalid('email')">
+              Please enter a valid email ( at least 3 characters)
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div flex="grow">
+          <mat-form-field class="full-width-input separate">
+            <input matInput type="password" placeholder="Password" formControlName="password" required>
+            <mat-error *ngIf="isFieldInvalid('password')">
+              Please enter a valid password ( at least 3 characters)
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div layout="row" layout-align="center center">
+          <button mat-raised-button class="md-raised form-button" type="submit"  [disabled]="loginForm.invalid && !loadingFlag || inValidData">
+          <span *ngIf="loadingFlag; else loginText">Loading ...</span>
+        </button>
+        </div>
+
+      </form>
+      <ng-template #loginText>
+        login
+      </ng-template>
+    </div>
+
+  </div>
+</div>

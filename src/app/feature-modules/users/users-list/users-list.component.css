@@ -1,0 +1,39 @@
+ table {
+  width: 100%;
+}
+/*.mat-cell {
+  font-size: 6pt;
+} */
+.mat-cell img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.mat-table {
+  overflow: auto;
+}
+
+.mat-row,
+.mat-header-row {
+  display: table-row;
+}
+
+.mat-cell,
+.mat-header-cell {
+  word-wrap: break-word;
+  display: table-cell;
+  padding: 0px 5px;
+  line-break: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  font-size: 6pt;
+
+}
+.table-loading-shade{
+  padding: 0 40%;
+}
+.mat-card {
+  border-radius: 0;
+}
